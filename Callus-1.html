@@ -1,0 +1,113 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Call us</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+
+</head>
+
+<body>
+
+    <section class="top" id="hide">
+
+        <div class="dropdown-menu-lg-start" onclick="toggleMenu()" style="color: antiquewhite; cursor: pointer;">☰</div>
+
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a class="btn btn-primary" href="./project/login.html">Login</a></li>
+                    <li><a class="btn btn-primary" href="./regi/regis.html">Register</a></li>
+                    <li><a class="btn btn-primary" href="./about us/About.html">About</a></li>
+                    <li><a class="btn btn-primary" href="./index.html">Home</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <center>
+
+
+        <section>
+            <div>
+                <form style="width:30%; border: solid;border-radius: 60px;background-color: rgba(30, 1, 31, 0.295); margin: 140px;">
+                    <fieldset>
+                        <legend style="color: wheat;">call</legend>
+                        <label for="fullname" style="color: wheat;">Full Name</label>
+                        <input type="text" id="fullname" name="fullname" class="btn btn-info" style="background-color:rgb(255, 255, 255);" /><br></br>
+                        <label for="email" style="color: wheat;">Email</label>
+                        <input type="email" id="email" name="email" class="btn btn-info" style="background-color:rgb(255, 255, 255);" /><br></br>
+
+                        <label for="subject" style="color: wheat;">Subject</label>
+                        <input type="text" id="subject" name="phone" class="btn btn-info" style="background-color:rgb(255, 255, 255);" /><br></br>
+                        <label for="" style="color: wheat;">your complaint</label>
+                        <textarea rows="3" class="text-bg-primary" style="color: wheat;"></textarea><br>
+                        <button type="button" class="btn btn-primary">send massge</button>
+                    </fieldset>
+                </form>
+            </div>
+            <hr></hr>
+
+
+        </section>
+        <script>
+            function loadSidebar() {
+                const sidebarHTML = `
+            <div id="sidebar" class="sidebar">
+                <button class="close-btn" onclick="toggleMenu()">✖</button>
+                <div id="sidebar-content">
+                    <ul>
+                        <li><a class="btn btn-primary" href="./project/login.html">Login</a></li>
+                        <li><a class="btn btn-primary" href="./regi/regis.html">Register</a></li>
+                        <li><a class="btn btn-primary" href="./about us/About.html">About</a></li>
+                        <li><a class="btn btn-primary" href="./Callus-1.html">Call</a></li>
+                    </ul>
+                </div>
+            </div>
+        `;
+                document.body.insertAdjacentHTML('beforeend', sidebarHTML);
+            }
+
+            // فتح وإغلاق القائمة
+            function toggleMenu() {
+                const sidebar = document.getElementById('sidebar');
+                sidebar.classList.toggle('open');
+            }
+
+            // تحميل القائمة عند فتح الصفحة
+            document.addEventListener('DOMContentLoaded', loadSidebar);
+
+            function toggleMenu() {
+                const sidebar = document.getElementById('sidebar');
+                sidebar.classList.toggle('open');
+
+                // جلب محتويات الصفحة الرئيسية
+                const mainContent = document.getElementById('content').innerHTML;
+
+                // إضافة المحتويات إلى النافذة المنبثقة
+                document.getElementById('sidebar-content').innerHTML = mainContent;
+            }
+        </script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function() {
+                let starsContainer = document.createElement('div');
+                starsContainer.classList.add('stars');
+                document.body.appendChild(starsContainer);
+
+                for (let i = 0; i < 900; i++) {
+                    let star = document.createElement('div');
+                    star.classList.add('star');
+                    star.style.left = `${Math.random() * 100}vw`;
+                    star.style.top = `${Math.random() * 100}vh`;
+                    star.style.animationDuration = `${Math.random() * 1 + 0.5}s`; // create random speed
+                    starsContainer.appendChild(star);
+                }
+            });
+        </script>
+    </center>
+</body>
+
+</html>

@@ -1,0 +1,278 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    background-size: inherit;
+    display: table;
+    float: right;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* ثابت اللون */
+    color: white;
+    z-index: 999;
+    width: auto;
+    float: right;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    float: right;
+    margin: 1px;
+}
+
+.navbar ul li a:hover {
+    background-color: #007bff;
+}
+
+@keyframes moveStars {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    width: 2px;
+    height: 2px;
+    opacity: 0.8;
+    animation: moveStars 50s linear infinite;
+}
+
+.star:nth-child(odd) {
+    animation-duration: 60s;
+}
+
+.stars .star {
+    animation-delay: calc(-60s * var(--i));
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #e20000;
+    float: right;
+    line-height: 70px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    transition: 0.5s;
+}
+
+#check {
+    display: none;
+}
+
+.input {
+    background-color: #ffffff;
+    width: 16.5%;
+    height: 40px;
+    display: flex;
+    border: 1px solid #1E1E1E;
+    margin-top: 20px;
+    float: center;
+}
+
+.imge {
+    background-color: #1E1E1E;
+    width: 38px;
+    height: 40px;
+    float: left;
+}
+
+.aa {
+    background-color: rgba(255, 255, 255, 0.082);
+    background-repeat: repeat;
+    background-size: cover;
+    background-position: bottom;
+    background-attachment: fixed;
+    margin: auto;
+    background-size: cover;
+    display: flex;
+    background-repeat: repeat;
+    background-size: cover;
+}
+
+.und {
+    font-size: 16px;
+    font-style: normal;
+    color: rgba(250, 242, 229, 0.52);
+}
+
+.left {
+    float: left;
+    margin-right: 20px;
+}
+
+.tab {
+    float: right;
+}
+
+.cen {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card1 {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 290px;
+    height: 330px;
+    text-align: center;
+    float: left;
+    margin-right: 25px;
+    box-sizing: border-box;
+    display: block;
+    color: #fffafa;
+}
+
+.card2 {
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 290px;
+    height: 330px;
+    text-align: center;
+    float: left;
+    margin-right: 25px;
+    box-sizing: border-box;
+    display: block;
+    color: #fffafa;
+}
+
+.card1:hover {
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+    background-origin: black;
+    box-decoration-break: black;
+    box-sizing: black;
+}
+
+.card2:hover {
+    box-shadow: 0 0 10px rgb(0, 0, 0);
+}
+
+.aaa {
+    width: 50%;
+    height: 200px;
+    margin: 0px 0 0 0px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.aaa img {
+    width: 10%;
+    height: 90%;
+    object-fit: cover;
+    border-radius: 5px;
+    border: 2px solid rgba(34, 255, 255, 0.658);
+    transition: all ease-in-out 0.5s;
+}
+
+.aaa img:hover {
+    width: 40%;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: rgb(30, 30, 30);
+    color: rgb(255, 255, 255);
+    overflow-y: auto;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(247, 246, 246, 0.5);
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 1px;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 1px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+}
+
+.sidebar ul li a:hover {
+    background-color: #fffafa;
+}
+
+.close-btn {
+    background: none;
+    color: white;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 1px;
+    margin-left: 10px;
+}
+
+.widttt {
+    background-color: #ffffff;
+    box-shadow: #580000;
+    width: 100%;
+    height: 20%;
+}
+
+.img1 {
+    width: 2%;
+    height: 2%;
+}
+
+h3 {
+    color: #fffafa;
+}

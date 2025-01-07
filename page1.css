@@ -1,0 +1,98 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: beige;
+    background-size: cover;
+    display: table;
+}
+
+.mobile {
+    padding: 30px;
+    width: fit-content;
+    height: fit-content;
+    background-color: transparent;
+    font-size: 12px;
+    text-align: center;
+    position: relative;
+    top: 3px;
+    left: 40%;
+    border-radius: 4px;
+}
+
+p {
+    margin: 30px;
+    font-size: 20px;
+    position: relative;
+    top: 20px;
+    border: solid 2px blue;
+    width: 90%;
+    height: 50px;
+    right: 200px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.img {
+    position: absolute;
+    bottom: auto;
+    margin: top;
+    float: left;
+}
+
+.top {
+    background-color: rgb(21, 21, 104);
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    display: flex;
+}
+
+nav {
+    background: rgb(44, 15, 123);
+    height: 75Px;
+    width: 100%;
+    transition: 1.5s;
+}
+
+nav ul {
+    float: right;
+    margin-right: 25px;
+}
+
+nav ul li {
+    display: inline-block;
+    line-height: 75px;
+}
+
+nav ul li a {
+    color: wheat;
+    font-size: 17px;
+    padding: 7px 13px;
+    border-radius: 1px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    font-family: serif;
+}
+
+a:hover {
+    background: rgb(0, 0, 0);
+    transition: 1s;
+}
+
+.checkbtn {
+    font-size: 30px;
+    color: #fff;
+    float: right;
+    line-height: 70px;
+    margin-right: 40px;
+    cursor: pointer;
+    display: none;
+    transition: 0.5s;
+}
+
+#check {
+    display: none;
+}

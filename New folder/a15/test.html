@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../test.css">
+    <link rel="stylesheet" href="../js/bootstrap.js">
+    <link rel="stylesheet" href="../css/bootstrap.css.map">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>Samsung a15</title>
+</head>
+
+<body>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+
+    <div class="dropdown-menu-lg-start" onclick="toggleMenu()" style="color: antiquewhite; cursor: pointer;">☰</div>
+
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a class="btn btn-primary" href="../login.html - Shortcut (2).lnk">Login</a></li>
+                <li><a class="btn btn-primary" href="../regis.html - Shortcut.lnk">Register</a></li>
+                <li><a class="btn btn-primary" href="../Untitled-1.html - Shortcut.lnk">Home</a></li>
+                <li><a class="btn btn-primary" href="../Callus-1.html - Shortcut.lnk">Call</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+
+
+
+
+
+
+
+    <section>
+
+        <img src="./Samsung-Galaxy-A15-4G.webp">
+
+        <div class="specifications">
+            <h2 class="relme ">SAMSUNG A15</h2>
+
+            <p> Processor: Octa-core Mediatek Helio G99 6nm technology</p>
+            <p>Storage/RAM: 128/256GB with 4/6/8GB RAM</p>
+            <p>Camera: Triple rear 50+5+2 MP / Front 13 MP</p>
+            <p>Display: 6.5 inches FHD+ with a small notch</p>
+            <p>Operating system: Android 14</p>
+            <p>Battery: 5000mAh</p>
+
+
+
+        </div>
+
+
+
+    </section>
+
+    <br>
+    <br>
+
+    <br>
+    <br>
+
+
+
+
+    <hr>
+
+
+
+
+
+
+    <section>
+
+
+        <div class="Unboxing">
+            <h2 class="Unboxing">Unboxing the samsung-a15-5g phone:-</h2>
+
+            <p id="Unboxing">Samsung Galaxy A15 phone - USB Type C cable - Metal pin - Instruction booklet explaining how to use the phone..</p>
+
+
+            <img class="phone" src="./Samsung-Galaxy-A15-4G-Colors.webp">
+
+
+            <h2 class="Apple">Samsung samsung-a15-5g price</h2>
+            <p id="Apple"> In Egypt, the 256GB version with 12GB RAM costs about 13,200 EGP (international warranty). In Saudi Arabia, the 256GB version with 12GB RAM is priced at 1,300 riyals. In the UAE, the 256GB version with 12GB RAM is priced at AED 1,180.</p>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+    </section>
+
+
+
+
+
+
+
+
+    <center>
+        <button type="button" class="btn btn-primary" style="width: 1000px;border-radius: 10px; "><a href="../call.html - Shortcut.lnk" class="ca">Card</a></button>
+    </center>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let starsContainer = document.createElement('div');
+            starsContainer.classList.add('stars');
+            document.body.appendChild(starsContainer);
+
+            for (let i = 0; i < 900; i++) {
+                let star = document.createElement('div');
+                star.classList.add('star');
+                star.style.left = `${Math.random() * 100}vw`;
+                star.style.top = `${Math.random() * 100}vh`;
+                star.style.animationDuration = `${Math.random() * 1 + 0.5}s`; // create random speed
+                starsContainer.appendChild(star);
+            }
+        });
+    </script>
+
+    <script>
+        function loadSidebar() {
+            const sidebarHTML = `
+    <div id="sidebar" class="sidebar">
+        <button class="close-btn" onclick="toggleMenu()">✖</button>
+        <div id="sidebar-content">
+            <ul>
+                <li><a class="btn btn-primary" href="./project/login.html">Login</a></li>
+                <li><a class="btn btn-primary" href="./regi/regis.html">Register</a></li>
+                <li><a class="btn btn-primary" href="./about us/About.html">About</a></li>
+                <li><a class="btn btn-primary" href="./Callus-1.html">Call</a></li>
+            </ul>
+        </div>
+    </div>
+`;
+            document.body.insertAdjacentHTML('beforeend', sidebarHTML);
+        }
+
+        // فتح وإغلاق القائمة
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        // تحميل القائمة عند فتح الصفحة
+        document.addEventListener('DOMContentLoaded', loadSidebar);
+
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+
+            // جلب محتويات الصفحة الرئيسية
+            const mainContent = document.getElementById('content').innerHTML;
+
+            // إضافة المحتويات إلى النافذة المنبثقة
+            document.getElementById('sidebar-content').innerHTML = mainContent;
+        }
+    </script>
+
+</body>
+
+</html>

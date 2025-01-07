@@ -1,0 +1,156 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* ثابت اللون */
+    color: white;
+    z-index: 999;
+    width: auto;
+    float: right;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    float: right;
+    margin: 1px;
+}
+
+.navbar ul li a:hover {
+    background-color: #007bff;
+}
+
+@keyframes moveStars {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    width: 2px;
+    height: 2px;
+    opacity: 0.8;
+    animation: moveStars 50s linear infinite;
+}
+
+.star:nth-child(odd) {
+    animation-duration: 60s;
+}
+
+.stars .star {
+    animation-delay: calc(-60s * var(--i));
+}
+
+.call {
+    width: 420px;
+    background: transparent;
+    color: #f70000;
+    border-radius: 10px;
+    padding: 30px;
+    border: 2px solid rgb(50, 3, 3);
+    backdrop-filter: blur(100%);
+    box-shadow: 0 0 10px rgba(14, 13, 13, 0.2);
+    margin: 100px;
+}
+
+.class2 {
+    color: #5d8f00;
+}
+
+.aa {
+    width: 80%;
+    padding: 10px;
+    background-color: #0476D0;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.aa:hover {
+    background-color: #0800ff;
+    transition: 0.5s;
+    box-shadow: #0800ff;
+    box-shadow: 0 0 10px rgb(1, 20, 95), inset 0 0 10px rgb(0, 51, 255);
+}
+
+.call:hover {
+    box-shadow: #0800ff;
+    transition: 0.5s;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: rgb(30, 30, 30);
+    color: rgb(255, 255, 255);
+    overflow-y: auto;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(247, 246, 246, 0.5);
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 1px;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 1px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+}
+
+.sidebar ul li a:hover {
+    background-color: #fffafa;
+}

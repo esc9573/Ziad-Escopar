@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="G:\Learn\mashro3 keber\regi\style.css">
+    <script src="G:\Learn\mashro3 keber\script\script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="G:\donload\ete\New folder\bootstrap-5.0.2-dist\js">
+    <link rel="stylesheet" href="G:\donload\ete\New folder\bootstrap-5.0.2-dist\js">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+</head>
+
+<body id="body">
+
+    <section class="top" id="hide">
+        <div class="dropdown-menu-lg-start" onclick="toggleMenu()" style="color: antiquewhite; cursor: pointer;">☰</div>
+
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a class="btn btn-primary" href="./project/login.html">Login</a></li>
+                    <li><a class="btn btn-primary" href="../index.html">Home</a></li>
+                    <li><a class="btn btn-primary" href="../about us/About.html">About</a></li>
+                    <li><a class="btn btn-primary" href="../Callus-1.html">Call</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+
+    <center>
+
+        <div class="card">
+            <h2>Register Form</h2>
+            <form action="../project/login.html" method="post">
+
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username"><br>
+                <label for="email">Email</label><br>
+                <input type="email" id="email" name="email">
+                <label for="phone">Phone</label>
+                <input type="text" id="phone" name="phone">
+                <label for="address">Address</label>
+                <input type="text" id="address" name="address">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password">
+                <label for="confirm_password">Confirm password</label>
+                <input type="password" id="confirm_password" name="confirm_password">
+                <button type="submit" style="margin-bottom:3px ;margin: 3px;" class="btn btn-primary" onclick="con()">Submit</button>
+            </form>
+
+        </div>
+    </center>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#whiteBtn").click(function() {
+                $("body").css("background-color", "white");
+            });
+
+            $("#blackBtn").click(function() {
+                $("body").css("background-color", "black");
+            });
+        });
+    </script>
+    <script>
+        function con() {
+            var username = document.getElementById("username").value;
+            var username = document.getElementById("username").value = "welcome " + username;
+            alert("welcome" + username);
+        }
+    </script>
+    <script>
+        function navigateto(sectionid) {
+            document.getElementById(sectionid).scrollIntoView({
+                behavior: 'smooth'
+            });
+        }
+    </script>
+    <script>
+        function loadSidebar() {
+            const sidebarHTML = `
+        <div id="sidebar" class="sidebar">
+            <button class="close-btn" onclick="toggleMenu()">✖</button>
+            <div id="sidebar-content">
+                <ul>
+                    <li><a class="btn btn-primary" href="../project/login.html">Login</a></li>
+                    <li><a class="btn btn-primary" href="../regi/regis.html">Register</a></li>
+                    <li><a class="btn btn-primary" href="../about us/About.html">About</a></li>
+                    <li><a class="btn btn-primary" href="../Callus-1.html">Call</a></li>
+                      <li><a class="btn btn-primary" href="../index.html">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    `;
+            document.body.insertAdjacentHTML('beforeend', sidebarHTML);
+        }
+
+        // فتح وإغلاق القائمة
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        // تحميل القائمة عند فتح الصفحة
+        document.addEventListener('DOMContentLoaded', loadSidebar);
+
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+
+            // جلب محتويات الصفحة الرئيسية
+            const mainContent = document.getElementById('content').innerHTML;
+
+            // إضافة المحتويات إلى النافذة المنبثقة
+            document.getElementById('sidebar-content').innerHTML = mainContent;
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let starsContainer = document.createElement('div');
+            starsContainer.classList.add('stars');
+            document.body.appendChild(starsContainer);
+
+            for (let i = 0; i < 350; i++) {
+                let star = document.createElement('div');
+                star.classList.add('star');
+                star.style.left = `${Math.random() * 100}vw`;
+                star.style.top = `${Math.random() * 100}vh`;
+                star.style.animationDuration = `${Math.random() * 1 + 0.50}s`; // create random speed
+                starsContainer.appendChild(star);
+            }
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,331 @@
+ 
+ body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: white;
+    font-family: sans-serif;
+   
+}
+
+
+div nav{
+    background-color: blue;
+     width: 100%;
+     min-height: 90px;
+     border-bottom: solid red 4px;
+     margin: 0;
+     
+}
+div nav ul{
+   float: right;
+   margin-right:15px ;
+   
+}
+div nav ul li{
+
+color: gold;
+display: inline;
+margin-right: 30px;
+line-height: 80px;
+
+}
+div nav ul li a{
+
+color: gold;
+text-decoration: none;
+font-size: 25px;
+font-weight: bold;
+letter-spacing: 1px;
+}
+
+div nav ul li a:hover{
+
+color: white;
+
+
+}
+
+
+
+
+.top {
+  background-color: #0476D0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  display: flex;
+}
+
+nav {
+  background: #0476D0;
+  height: 75Px;
+  width: 100%;
+  transition: 1.5s;
+}
+
+nav ul {
+  float: right;
+  margin-right: 25px;
+}
+
+nav ul li {
+  display: inline-block;
+  line-height: 75px;
+}
+
+nav ul li a {
+  color: wheat;
+  font-size: 17px;
+  padding: 7px 13px;
+  border-radius: 1px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  font-family: serif;
+}
+
+a:hover {
+  background: rgb(0, 0, 0);
+  transition: 1s;
+}
+.a{
+  text-decoration: none;
+ 
+  color: black;
+}
+.a:hover{
+  background-color: blue;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.price{
+
+left: 4px;
+border-bottom: solid blue 4px;
+
+
+}
+
+#Specification{
+
+width: 75%;
+font-size: 20px;
+font-weight: bold;
+
+
+}
+
+h1{
+
+  direction: rtl;
+  
+  text-align: right;
+  
+  position: absolute;
+  left: 48%;
+  
+  }
+  
+ div section{
+position: absolute;
+left: 45%; 
+bottom: -80px;
+
+
+
+}
+
+div section p{
+
+border: solid rgb(0, 80, 255) 2px;
+padding: 13px;
+text-align: center;
+background-color:rgb(0, 80, 255) ;
+color: white;
+font-size: 20px;
+border-radius: 5px;
+font-weight: bold;
+margin: 30px 0;
+
+
+}
+img{
+
+
+width: 550px;
+position: relative;
+bottom: -70px;
+margin-bottom: 100px;
+
+}
+
+div img{
+
+position:absolute;
+left: 60%;
+top: 175%;
+width: 530px;
+
+}
+
+div h1{
+
+left: 0;
+border-bottom: solid 6px green;
+
+}
+
+div ul li p{
+
+font-weight: bold;
+font-size: 17px;
+width: 750px;
+
+}
+
+.Advantage{
+    border-bottom: solid 6px green;
+    left: 4px;
+
+}
+
+
+
+.Disadvantage{
+
+  border-bottom: solid 6px red;
+  left: 4px;
+
+}
+.Opening{
+
+left: 4px;
+border-bottom: solid 6px gold;
+
+}
+.phone{
+
+margin-top: 7%;
+
+font-weight: bold;
+font-size: 17px;
+width: 50%;
+
+
+}
+.img{
+
+width: 450px;
+
+}
+.Apple {
+
+  left: 0;
+  border-bottom: solid 6px rgb(225, 0, 255);
+  
+}
+
+#hide{
+
+
+width: 300px;
+
+
+}
+
+.para{
+
+padding: 10px;
+width: 100px;
+background-color: transparent;
+border-radius: 6px;
+margin: 40px 0 50px 0;
+
+
+
+
+}
+.pare{
+
+  padding: 10px;
+width: 100px;
+background-color: transparent;
+border-radius: 6px;
+
+
+
+
+
+}
+.para:hover{
+
+color: white;
+background-color: black;
+
+}
+.pare:hover{
+
+  color: white;
+  background-color: black;
+  
+  }
+ 
+
+
+  .review{
+
+  
+  position: relative;
+  top: -10px;
+  left: -985px;
+  border-bottom:red solid 6px ;
+
+
+  }
+  .videoElementId{
+
+margin-bottom: 100px;
+position: relative;
+left: -200px;
+
+
+  }

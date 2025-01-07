@@ -1,0 +1,93 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title>About us</title>
+    <meta charset="utf-8" />
+
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <script src="./js/bootstrap.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+</head>
+
+<body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <section class="top" id="hide">
+
+        <div class="dropdown-menu-lg-start" onclick="toggleMenu()" style="color: antiquewhite; cursor: pointer;">☰</div>
+
+        <header>
+            <nav class="navbar">
+                <ul>
+                    <li><a class="btn btn-primary" href="../project/login.html">Login</a></li>
+                    <li><a class="btn btn-primary" href="../regi/regis.html">Register</a></li>
+                    <li><a class="btn btn-primary" href=".../Untitled-1.html">Home</a></li>
+                    <li><a class="btn btn-primary" href="../Callus-1.html">Call</a></li>
+                </ul>
+            </nav>
+        </header>
+    </section>
+
+    <h3>About our company</h3>
+    <p>Playtech Phone is your ultimate destination for purchasing the latest mobile phones at unbeatable prices. Our website offers an extensive range of smartphones from top global brands such as Apple, Samsung, Huawei, and many more. We pride ourselves
+        on providing a seamless and user-friendly browsing experience, allowing you to easily find the perfect phone that meets your needs and budget. At Playtech Phone, we understand the importance of staying connected in today’s fast-paced world. That’s
+        why we offer exclusive deals and discounts, ensuring you get the best value for your money. Our dedicated customer service team is always ready to assist you with any inquiries or concerns, making your shopping experience smooth and hassle-free.</p>
+    <script>
+        function loadSidebar() {
+            const sidebarHTML = `
+            <div id="sidebar" class="sidebar">
+                <button class="close-btn" onclick="toggleMenu()">✖</button>
+                <div id="sidebar-content">
+                    <ul>
+                        <li><a class="btn btn-primary" href="../project/login.html">Login</a></li>
+                        <li><a class="btn btn-primary" href="../regi/regis.html">Register</a></li>
+                        <li><a class="btn btn-primary" href="./about us/About.html">About</a></li>
+                        <li><a class="btn btn-primary" href="../Callus-1.html">Call</a></li>
+                          <li><a class="btn btn-primary" href="../Untitled-1.html">Home</a></li>
+                    </ul>
+                </div>
+            </div>
+        `;
+            document.body.insertAdjacentHTML('beforeend', sidebarHTML);
+        }
+
+        // فتح وإغلاق القائمة
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+        }
+
+        // تحميل القائمة عند فتح الصفحة
+        document.addEventListener('DOMContentLoaded', loadSidebar);
+
+        function toggleMenu() {
+            const sidebar = document.getElementById('sidebar');
+            sidebar.classList.toggle('open');
+
+            // جلب محتويات الصفحة الرئيسية
+            const mainContent = document.getElementById('content').innerHTML;
+
+            // إضافة المحتويات إلى النافذة المنبثقة
+            document.getElementById('sidebar-content').innerHTML = mainContent;
+        }
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            let starsContainer = document.createElement('div');
+            starsContainer.classList.add('stars');
+            document.body.appendChild(starsContainer);
+
+            for (let i = 0; i < 900; i++) {
+                let star = document.createElement('div');
+                star.classList.add('star');
+                star.style.left = `${Math.random() * 100}vw`;
+                star.style.top = `${Math.random() * 100}vh`;
+                star.style.animationDuration = `${Math.random() * 1 + 0.5}s`; // create random speed
+                starsContainer.appendChild(star);
+            }
+        });
+    </script>
+</body>
+
+</html>

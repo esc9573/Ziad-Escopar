@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(0, 0, 0);
+    background-size: inherit;
+    display: table;
+    float: right;
+}
+
+h2 {
+    text-align: center;
+    color: #000000;
+}
+
+label {
+    display: flex;
+    margin-bottom: 25px;
+    color: #000000;
+}
+
+input {
+    width: 450px;
+    padding: 1px;
+    background-color: #0476D0;
+    color: rgb(0, 0, 0);
+    border: 1px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0476D0;
+}
+
+.card {
+    width: 500px;
+    height: 600px;
+    background: rgb(255, 0, 0);
+    border-radius: 10px;
+    box-shadow: 0px 5px 10px 1px rgb(255, 0, 0);
+    padding: 20px;
+    margin: 100px;
+    justify-content: center;
+}
+
+.btn btn-primary:hover {
+    transition: 0.5s;
+    background-color: #00ff2f;
+}
+
+.card:hover {
+    box-shadow: 0 0 10px rgb(255, 85, 85);
+    transition: 0.4s;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: rgb(30, 30, 30);
+    color: rgb(255, 255, 255);
+    overflow-y: auto;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(247, 246, 246, 0.5);
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 1px;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 1px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+}
+
+.sidebar ul li a:hover {
+    background-color: #fffafa;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    z-index: 999;
+    width: auto;
+    float: right;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    float: right;
+}
+
+.navbar ul li a:hover {
+    background-color: #007bff;
+}
+
+@keyframes moveStars {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    width: 2px;
+    height: 2px;
+    opacity: 0.8;
+    animation: moveStars 50s linear infinite;
+}
+
+.star:nth-child(odd) {
+    animation-duration: 60s;
+}
+
+.stars .star {
+    animation-delay: calc(-60s * var(--i));
+}

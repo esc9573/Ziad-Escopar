@@ -1,0 +1,230 @@
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(255, 255, 255);
+    background-size: inherit;
+    display: table;
+    float: right;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 10px 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    /* ثابت اللون */
+    color: white;
+    z-index: 999;
+    width: auto;
+    float: right;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    float: right;
+    margin: 1px;
+}
+
+.navbar ul li a:hover {
+    background-color: #007bff;
+}
+
+@keyframes moveStars {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-100%);
+    }
+}
+
+.stars {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.star {
+    position: absolute;
+    background-color: white;
+    width: 2px;
+    height: 2px;
+    opacity: 0.8;
+    animation: moveStars 50s linear infinite;
+}
+
+.star:nth-child(odd) {
+    animation-duration: 60s;
+}
+
+.stars .star {
+    animation-delay: calc(-60s * var(--i));
+}
+
+.specifications {
+    font-size: 18px;
+    position: absolute;
+    right: 190px;
+    top: 160px;
+    font-weight: bold;
+}
+
+.specifications .relme {
+    font-weight: bold;
+    text-align: center;
+}
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: -300px;
+    width: 300px;
+    height: 100%;
+    background-color: rgb(30, 30, 30);
+    color: rgb(255, 255, 255);
+    overflow-y: auto;
+    transition: 0.3s ease-in-out;
+    box-shadow: 2px 0 5px rgba(247, 246, 246, 0.5);
+}
+
+.sidebar.open {
+    left: 0;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 1px;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 1px;
+    border-bottom: 1px solid #ffffff;
+}
+
+.sidebar ul li a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+}
+
+.sidebar ul li a:hover {
+    background-color: #fffafa;
+}
+
+section .specifications p {
+    background-color: rgb(0, 80, 255);
+    padding: 10px;
+    border: solid 2px rgb(0, 80, 255);
+    border-radius: 6px;
+    color: white;
+    margin-top: 10px;
+    margin: 0 0 25px 0;
+    text-align: center;
+}
+
+section img {
+    position: relative;
+    left: 120px;
+    top: 75px;
+}
+
+.top {
+    margin-top: -60px;
+}
+
+section div .h2 {
+    font-weight: bold;
+    border-bottom: solid 6px blue;
+    width: fit-content;
+    margin-left: 10px;
+}
+
+section .review p {
+    font-size: 18px;
+    font-weight: bold;
+    width: 80%
+}
+
+section div img {
+    position: relative;
+    left: 745px;
+    top: 250px;
+    width: 600px;
+}
+
+.Unboxing {
+    border-bottom: solid 6px gold;
+    position: relative;
+    bottom: 200px;
+    left: 15px;
+    font-weight: bold;
+    width: fit-content;
+    margin-top: 450px;
+}
+
+#Unboxing {
+    font-size: 18px;
+    font-weight: bold;
+    width: 80%;
+    margin-top: -190px;
+}
+
+.phone {
+    left: 10px;
+    top: 10px;
+    width: 470px;
+}
+
+.Apple {
+    margin-top: 70px;
+    border-bottom: solid 6px purple;
+    width: fit-content;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+#Apple {
+    font-size: 18px;
+    font-weight: bold;
+    width: 80%
+}
+
+.ca {
+    color: bisque;
+    box-shadow: black;
+}
+
+.ca:hover {
+    color: black;
+    transition: 0.5s;
+    box-shadow: white;
+}
